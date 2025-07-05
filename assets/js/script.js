@@ -169,3 +169,101 @@ window.addEventListener('DOMContentLoaded', function() {
   // Show all projects initially
   filterFunc("all");
 });
+
+
+// Project Modal functionality
+const projectCards = document.querySelectorAll("[data-project-modal]");
+const projectModalContainer = document.querySelector("[data-project-modal-container]");
+const projectModalCloseBtn = document.querySelector("[data-project-modal-close]");
+const projectOverlay = document.querySelector("[data-project-overlay]");
+
+// Modal content elements
+const projectModalTitle = document.querySelector("[data-project-modal-title]");
+const projectModalDescription = document.querySelector("[data-project-modal-description]");
+const projectModalTechnologies = document.querySelector("[data-project-modal-technologies]");
+const projectModalGithub = document.querySelector("[data-project-modal-github]");
+const projectModalDemo = document.querySelector("[data-project-modal-demo]");
+const projectModalReport = document.querySelector("[data-project-modal-report]");
+
+// Project modal toggle function
+const projectModalFunc = function () {
+  projectModalContainer.classList.toggle("active");
+}
+
+// Add click event to all project cards
+for (let i = 0; i < projectCards.length; i++) {
+  projectCards[i].addEventListener("click", function () {
+    // Get project data from data attributes
+    const title = this.dataset.title;
+    const description = this.dataset.description;
+    const technologies = this.dataset.technologies;
+    const github = this.dataset.github;
+    const demo = this.dataset.demo;
+    const report = this.dataset.report;
+
+    // Populate modal content
+    projectModalTitle.textContent = title;
+    projectModalDescription.textContent = description;
+
+    // Create technology tags
+    if (technologies) {
+      const techArray = technologies.split(',');
+      projectModalTechnologies.innerHTML = '';
+      techArray.forEach(tech => {
+        const techTag = document.createElement('span');
+        techTag.className = 'tech-tag';
+        techTag.textContent = tech.trim();
+        projectModalTechnologies.appendChild(techTag);
+      });
+    }
+
+    // Set button links and visibility
+    if (github) {
+      projectModalGithub.href = github;
+      projectModalGithub.style.display = 'inline-flex';
+    } else {
+      projectModalGithub.style.display = 'none';
+    }
+
+    if (demo) {
+      projectModalDemo.href = demo;
+      projectModalDemo.style.display = 'inline-flex';
+    } else {
+      projectModalDemo.style.display = 'none';
+    }
+
+    if (report) {
+      projectModalReport.href = report;
+      projectModalReport.style.display = 'inline-flex';
+    } else {
+      projectModalReport.style.display = 'none';
+    }
+
+    // Show modal
+    projectModalFunc();
+  });
+}
+
+// Add click event to modal close button and overlay
+if (projectModalCloseBtn) {
+  projectModalCloseBtn.addEventListener("click", projectModalFunc);
+}
+
+if (projectOverlay) {
+  projectOverlay.addEventListener("click", projectModalFunc);
+}
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape' && projectModalContainer.classList.contains('active')) {
+    projectModalFunc();
+  }
+});
+
+// Prevent modal from closing when clicking inside the modal content
+const projectModal = document.querySelector(".project-modal");
+if (projectModal) {
+  projectModal.addEventListener("click", function(event) {
+    event.stopPropagation();
+  });
+}

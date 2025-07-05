@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Modal</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .test-card { 
+            border: 1px solid #ccc; 
+            padding: 20px; 
+            margin: 10px; 
+            cursor: pointer; 
+            background: #f9f9f9;
+        }
+        .test-card:hover { background: #e9e9e9; }
+    </style>
+</head>
+<body>
+    <h1>Portfolio Modal Test</h1>
+    <p>This is a simple test to verify the modal functionality works correctly.</p>
+    
+    <div class="test-card" data-project-modal
+         data-title="Test Project"
+         data-description="This is a test project to verify modal functionality."
+         data-technologies="HTML,CSS,JavaScript"
+         data-github="https://github.com/test"
+         data-demo="https://demo.test.com"
+         data-report="">
+        <h3>Click me to test modal</h3>
+        <p>Test Project Card</p>
+    </div>
+
+    <script>
+        console.log("Testing modal functionality...");
+        
+        // Test if elements exist
+        const projectCards = document.querySelectorAll("[data-project-modal]");
+        console.log("Found project cards:", projectCards.length);
+        
+        const projectModalContainer = document.querySelector("[data-project-modal-container]");
+        console.log("Modal container exists:", !!projectModalContainer);
+        
+        if (projectCards.length > 0) {
+            projectCards[0].addEventListener("click", function() {
+                console.log("Project card clicked!");
+                console.log("Title:", this.dataset.title);
+                console.log("Description:", this.dataset.description);
+                console.log("Technologies:", this.dataset.technologies);
+            });
+        }
+    </script>
+</body>
+</html>
