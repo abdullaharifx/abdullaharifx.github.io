@@ -217,11 +217,6 @@
         </p>         
           <p>
             My journey? It’s a whirlwind of data, creativity, and a sprinkle of chaos. From crafting Urdu voice schedulers that hum with cultural rhythm to building lip-reading systems that amplify silent voices in Pakistan, I wield Python, TensorFlow, and PySpark to turn messy data into dazzling insights.
-          </p>       
-        
-                
-          <p>
-            This portfolio? It’s my kaleidoscope of experiments, triumphs, and untamed ideas. Step inside my world of AI alchemy and see what sparks fly.
           </p>
         </section>
         
@@ -735,7 +730,10 @@ I scored an 'A' in Mathematics with 'B' in Physics and Computer Science.
       <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
       <li class="filter-item"><button data-filter-btn>Machine Learning</button></li>
       <li class="filter-item"><button data-filter-btn>Data Analysis</button></li>
-      <li class="filter-item"><button data-filter-btn>Deep Learning</button></li>
+      <li class="filter-item"><button data-filter-btn>NLP</button></li>
+      <li class="filter-item"><button data-filter-btn>Computer Vision</button></li>
+      <li class="filter-item"><button data-filter-btn>Agentic AI</button></li>
+      <li class="filter-item"><button data-filter-btn>Multi Modal AI</button></li>
     </ul>
 
     <!-- Mobile Dropdown -->
@@ -750,20 +748,23 @@ I scored an 'A' in Mathematics with 'B' in Physics and Computer Science.
       <ul class="select-list">
         <li class="select-item"><button data-select-item>All</button></li>
         <li class="select-item"><button data-select-item>Machine Learning</button></li>
-        <li class="select-item"><button data-select-item>Data Analysis</button></li>
-        <li class="select-item"><button data-select-item>Deep Learning</button></li>
+        <li class="select-item"><button data-select-item>Data Analysis</button></li> 
+        <li class="select-item"><button data-select-item>NLP</button></li>
+        <li class="select-item"><button data-select-item>Computer Vision</button></li>
+        <li class="select-item"><button data-select-item>Agentic AI</button></li>
+        <li class="select-item"><button data-select-item>Multi Modal AI</button></li>
       </ul>
     </div>
 
     <!-- Projects -->
     <ul class="project-list">
 
-      <li class="project-item active" data-filter-item data-category="Machine Learning">
+      <li class="project-item active" data-filter-item data-category="NLP,Multi Modal AI">
         <div class="project-card" data-project-modal
-             data-title="Car Resale Price Estimator"
-             data-description="A machine learning model that predicts car resale prices based on various features like make, model, year, mileage, and condition. Built using Python and scikit-learn with feature engineering and hyperparameter tuning."
-             data-technologies="Python,Scikit-learn,Pandas,NumPy,Matplotlib"
-             data-github="https://github.com/your-username/car-resale-price-estimator"
+             data-title="DORA – Urdu Voice Scheduler"
+             data-description="A full-stack AI-powered calendar assistant that enables Urdu voice-based event creation and scheduling. Features OpenAI Whisper API for Urdu voice transcription, Google Calendar API integration, NextAuth.js authentication, and a responsive frontend built with Next.js, React, and TypeScript. Includes Text-to-Speech scheduling with recurring options and robust timezone-aware event management."
+             data-technologies="Next.js,React,TypeScript,OpenAI Whisper,Google Calendar API,NextAuth.js,Tailwind CSS,Vercel"
+             data-github="https://github.com/abdullaharif381/dora-a3"
              data-demo=""
              data-report="">
 
@@ -771,43 +772,43 @@ I scored an 'A' in Mathematics with 'B' in Physics and Computer Science.
             <div class="project-item-icon-box">
               <ion-icon name="eye-outline"></ion-icon>
             </div>
-            <img src="./assets/images/project-1.jpg" alt="Car Resale Price Estimator" loading="lazy">
+            <img src="./assets/images/project-1.jpg" alt="DORA Urdu Voice Scheduler" loading="lazy">
           </figure>
 
-          <h3 class="project-title">Car Resale Price Estimator</h3>
-          <p class="project-category">Machine Learning</p>
+          <h3 class="project-title">DORA – Urdu Voice Scheduler</h3>
+          <p class="project-category">NLP</p>
 
         </div>
       </li>
 
-      <li class="project-item active" data-filter-item data-category="Machine Learning">
+      <li class="project-item active" data-filter-item data-category="Computer Vision,Multi Modal AI">
         <div class="project-card" data-project-modal
-             data-title="Orizon (PySpark)"
-             data-description="A distributed machine learning project built with Apache Spark for large-scale data processing. Implements advanced analytics and predictive modeling capabilities for big data scenarios."
-             data-technologies="Apache Spark,PySpark,Python,MLlib,Scala"
-             data-github="https://github.com/your-username/orizon"
+             data-title="Lip Reading with LipNet & SyncVSR"
+             data-description="A multimodal visual speech recognition system using deep learning to transcribe silent videos. Implemented LipNet for end-to-end sentence-level lip reading using STCNN + Bi-GRU with CTC loss, and developed SyncVSR for frame-level synchronization of video with quantized audio tokens. Trained on BBC-Oxford LRS2 dataset using PyTorch, OpenCV, DLib, and FaceMesh."
+             data-technologies="PyTorch,OpenCV,DLib,FaceMesh,Deep Learning,Computer Vision,Sequence Modeling"
+             data-github="https://github.com/abdullaharif381/LipReader"
              data-demo=""
-             data-report="">
+             data-report="lip-reader-report.pdf">
 
           <figure class="project-img">
             <div class="project-item-icon-box">
               <ion-icon name="eye-outline"></ion-icon>
             </div>
-            <img src="./assets/images/project-2.png" alt="Orizon" loading="lazy">
+            <img src="./assets/images/project-2.png" alt="Lip Reading System" loading="lazy">
           </figure>
 
-          <h3 class="project-title">Orizon (PySpark)</h3>
-          <p class="project-category">Machine Learning</p>
+          <h3 class="project-title">Lip Reading with LipNet & SyncVSR</h3>
+          <p class="project-category">Computer Vision</p>
 
         </div>
       </li>
 
-      <li class="project-item active" data-filter-item data-category="Data Analysis">
+      <li class="project-item active" data-filter-item data-category="Data Analysis,Machine Learning">
         <div class="project-card" data-project-modal
-             data-title="Car Distributions across Pakistan"
-             data-description="Comprehensive data analysis project exploring car distribution patterns across different cities and provinces in Pakistan. Includes statistical analysis, visualizations, and insights into market trends."
-             data-technologies="Python,Pandas,Matplotlib,Seaborn,Plotly,Jupyter"
-             data-github="https://github.com/your-username/car-distribution-pk"
+             data-title="Video Game Success Prediction"
+             data-description="Predicted regional sales success of video games (Japan, Europe, America) before launch using comprehensive data science techniques. Utilized Python for exploratory data analysis, web scraping for data collection, and advanced algorithm design for predictive modeling. Analyzed market trends and consumer behavior patterns to forecast game performance across different geographical markets."
+             data-technologies="Python,Data Analysis,Web Scraping,Predictive Modeling,EDA,Market Analysis"
+             data-github="https://github.com/abdullaharif381"
              data-demo=""
              data-report="">
 
@@ -815,21 +816,21 @@ I scored an 'A' in Mathematics with 'B' in Physics and Computer Science.
             <div class="project-item-icon-box">
               <ion-icon name="eye-outline"></ion-icon>
             </div>
-            <img src="./assets/images/project-3.jpg" alt="Car Distributions" loading="lazy">
+            <img src="./assets/images/project-3.jpg" alt="Video Game Success Prediction" loading="lazy">
           </figure>
 
-          <h3 class="project-title">Car Distributions across Pakistan</h3>
+          <h3 class="project-title">Video Game Success Prediction</h3>
           <p class="project-category">Data Analysis</p>
 
         </div>
       </li>
 
-      <li class="project-item active" data-filter-item data-category="Deep Learning">
+      <li class="project-item active" data-filter-item data-category="Computer Vision,Machine Learning">
         <div class="project-card" data-project-modal
-             data-title="Brawlhalla Move Detection"
-             data-description="Computer vision project that detects and classifies fighting game moves in real-time using deep learning. Trained on gameplay footage to recognize different character actions and combos."
-             data-technologies="Python,TensorFlow,OpenCV,YOLOv5,Deep Learning"
-             data-github="https://github.com/your-username/brawlhalla-detection"
+             data-title="Facial Emotion Recognition with PySpark"
+             data-description="Built a scalable pipeline for facial emotion detection using big data tools. Used PySpark to process large image datasets and implemented CNN-based classifiers to identify 6 emotion classes. Integrated annotation tools and visualization modules for comprehensive emotion analysis. Designed for distributed processing of massive image datasets with high accuracy emotion classification."
+             data-technologies="PySpark,CNN,Big Data Analytics,Image Classification,Distributed Processing,Computer Vision"
+             data-github="https://github.com/abdullaharif381"
              data-demo=""
              data-report="">
 
@@ -837,109 +838,65 @@ I scored an 'A' in Mathematics with 'B' in Physics and Computer Science.
             <div class="project-item-icon-box">
               <ion-icon name="eye-outline"></ion-icon>
             </div>
-            <img src="./assets/images/project-4.png" alt="Brawlhalla" loading="lazy">
-          </figure>
-
-          <h3 class="project-title">Brawlhalla (Move Detection)</h3>
-          <p class="project-category">Deep Learning</p>
-
-        </div>
-      </li>
-
-      <li class="project-item active" data-filter-item data-category="Data Analysis">
-        <div class="project-card" data-project-modal
-             data-title="DSM Dashboard"
-             data-description="Interactive dashboard for Data Science and Machine Learning projects. Features real-time analytics, performance metrics visualization, and model monitoring capabilities."
-             data-technologies="Python,Streamlit,Plotly,Pandas,SQLite"
-             data-github="https://github.com/your-username/dsm-dashboard"
-             data-demo="https://dsm-dashboard-demo.herokuapp.com"
-             data-report="">
-
-          <figure class="project-img">
-            <div class="project-item-icon-box">
-              <ion-icon name="eye-outline"></ion-icon>
-            </div>
-            <img src="./assets/images/project-5.png" alt="DSM" loading="lazy">
-          </figure>
-
-          <h3 class="project-title">DSM Dashboard</h3>
-          <p class="project-category">Data Analysis</p>
-
-        </div>
-      </li>
-
-      <li class="project-item active" data-filter-item data-category="Deep Learning">
-        <div class="project-card" data-project-modal
-             data-title="Facial Emotion Recognition (PySpark)"
-             data-description="Large-scale facial emotion recognition system built with Apache Spark. Processes video streams in real-time to detect and classify emotions using convolutional neural networks."
-             data-technologies="PySpark,TensorFlow,OpenCV,Deep Learning,Apache Spark"
-             data-github="https://github.com/your-username/emotion-recognition-pyspark"
-             data-demo=""
-             data-report="">
-
-          <figure class="project-img">
-            <div class="project-item-icon-box">
-              <ion-icon name="eye-outline"></ion-icon>
-            </div>
-            <img src="./assets/images/project-6.png" alt="Facial Emotion Recognition" loading="lazy">
+            <img src="./assets/images/project-4.png" alt="Facial Emotion Recognition" loading="lazy">
           </figure>
 
           <h3 class="project-title">Facial Emotion Recognition (PySpark)</h3>
-          <p class="project-category">Deep Learning</p>
-
-        </div>
-      </li>
-
-      <li class="project-item active" data-filter-item data-category="Deep Learning">
-        <div class="project-card" data-project-modal
-             data-title="AI Summary Generator"
-             data-description="Natural Language Processing model that generates concise summaries from long text documents. Uses transformer architecture and attention mechanisms for high-quality extractive and abstractive summarization."
-             data-technologies="Python,Transformers,BERT,PyTorch,NLP,Hugging Face"
-             data-github="https://github.com/your-username/summary-generator"
-             data-demo=""
-             data-report="">
-
-          <figure class="project-img">
-            <div class="project-item-icon-box">
-              <ion-icon name="eye-outline"></ion-icon>
-            </div>
-            <img src="./assets/images/project-7.png" alt="Summary Generator" loading="lazy">
-          </figure>
-
-          <h3 class="project-title">AI Summary Generator</h3>
-          <p class="project-category">Deep Learning</p>
-
-        </div>
-      </li>
-
-      <li class="project-item active" data-filter-item data-category="Machine Learning">
-        <div class="project-card" data-project-modal
-             data-title="Smart Task Manager"
-             data-description="Intelligent task management system that uses machine learning to predict task completion times, prioritize work, and optimize scheduling based on user behavior patterns."
-             data-technologies="Python,Scikit-learn,Flask,React,Machine Learning"
-             data-github="https://github.com/your-username/task-manager-ml"
-             data-demo="https://smart-task-manager.netlify.app"
-             data-report="">
-
-          <figure class="project-img">
-            <div class="project-item-icon-box">
-              <ion-icon name="eye-outline"></ion-icon>
-            </div>
-            <img src="./assets/images/project-8.jpg" alt="Task Manager" loading="lazy">
-          </figure>
-
-          <h3 class="project-title">Smart Task Manager</h3>
-          <p class="project-category">Machine Learning</p>
+          <p class="project-category">Computer Vision</p>
 
         </div>
       </li>
 
       <li class="project-item active" data-filter-item data-category="Data Analysis">
         <div class="project-card" data-project-modal
-             data-title="Flight Arrival Analysis"
-             data-description="Comprehensive analysis of flight arrival patterns, delays, and performance metrics. Includes predictive modeling for delay forecasting and interactive visualizations of airport performance."
-             data-technologies="Python,Pandas,Matplotlib,Seaborn,SQL,Statistics"
-             data-github="https://github.com/your-username/arrival-analysis"
+             data-title="Chem Ease – Inventory Management"
+             data-description="Desktop application for managing chemical inventory in a retail lab supply setting for Alkhair Scientific Traders. Built using C# and WinForms with OCR implementation for label scanning and search functionality. Developed following Agile/Scrum methodology with sprints, Trello project management, and paired programming practices."
+             data-technologies="C#,WinForms,OCR,Agile,Scrum,Object-Oriented Programming,Desktop Development"
+             data-github="https://github.com/abdullaharif381"
+             data-demo=""
+             data-report="Presentation.pptx">
+
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/project-5.png" alt="Chem Ease Inventory" loading="lazy">
+          </figure>
+
+          <h3 class="project-title">Chem Ease – Inventory Management</h3>
+          <p class="project-category">Data Analysis</p>
+
+        </div>
+      </li>
+
+      <li class="project-item active" data-filter-item data-category="Machine Learning,Data Analysis">
+        <div class="project-card" data-project-modal
+             data-title="Used Car Price Prediction Pakistan"
+             data-description="Developed an XGBoost regression model to predict car resale values in the Pakistani market with 97% accuracy. Features comprehensive data visualization with Tableau, interactive Streamlit dashboard, and geospatial filtering based on registration city and model year. Includes advanced feature engineering and market trend analysis for accurate price predictions."
+             data-technologies="XGBoost,Scikit-learn,Streamlit,Tableau,Python,Data Engineering,ML Regression"
+             data-github="https://github.com/abdullaharif381"
+             data-demo="https://car-price-prediction-pk.streamlit.app"
+             data-report="">
+
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/project-6.png" alt="Car Price Prediction" loading="lazy">
+          </figure>
+
+          <h3 class="project-title">Used Car Price Prediction Pakistan</h3>
+          <p class="project-category">Machine Learning</p>
+
+        </div>
+      </li>
+
+      <li class="project-item active" data-filter-item data-category="Computer Vision">
+        <div class="project-card" data-project-modal
+             data-title="Brick Counter using OpenCV"
+             data-description="Created an image analysis system to count bricks in photographs for industrial applications. Utilized OpenCV for advanced contour detection and edge processing techniques. Built with Python, NumPy, and Matplotlib for comprehensive image preprocessing and analysis. Designed for automated counting in construction and manufacturing environments."
+             data-technologies="OpenCV,Python,NumPy,Matplotlib,Image Processing,Object Detection,Computer Vision"
+             data-github="https://github.com/abdullaharif381"
              data-demo=""
              data-report="">
 
@@ -947,11 +904,33 @@ I scored an 'A' in Mathematics with 'B' in Physics and Computer Science.
             <div class="project-item-icon-box">
               <ion-icon name="eye-outline"></ion-icon>
             </div>
-            <img src="./assets/images/project-9.png" alt="Arrival" loading="lazy">
+            <img src="./assets/images/project-7.png" alt="Brick Counter" loading="lazy">
           </figure>
 
-          <h3 class="project-title">Flight Arrival Analysis</h3>
-          <p class="project-category">Data Analysis</p>
+          <h3 class="project-title">Brick Counter using OpenCV</h3>
+          <p class="project-category">Computer Vision</p>
+
+        </div>
+      </li>
+
+      <li class="project-item active" data-filter-item data-category="Computer Vision">
+        <div class="project-card" data-project-modal
+             data-title="Volume Control with Hand Gestures"
+             data-description="Developed a real-time computer vision system for gesture-based volume control using advanced hand tracking technology. Implemented OpenCV and MediaPipe for accurate gesture recognition with PyCaw and Pythoncom for seamless audio control integration. Features real-time processing for smooth human-computer interaction experience."
+             data-technologies="OpenCV,MediaPipe,PyCaw,Pythoncom,Computer Vision,Gesture Recognition,Real-Time Processing"
+             data-github="https://github.com/abdullaharif381"
+             data-demo=""
+             data-report="">
+
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/project-8.jpg" alt="Hand Gesture Volume Control" loading="lazy">
+          </figure>
+
+          <h3 class="project-title">Volume Control with Hand Gestures</h3>
+          <p class="project-category">Computer Vision</p>
 
         </div>
       </li>
