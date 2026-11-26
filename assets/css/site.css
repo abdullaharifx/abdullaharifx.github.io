@@ -504,18 +504,17 @@ strong { font-weight: 800; }
 
 .bio {
   display: grid;
-  grid-template-columns: 11rem minmax(0, 1fr);
-  gap: 2rem;
+  grid-template-columns: 15rem minmax(0, 1fr);
+  gap: 2.5rem;
   align-items: start;
   margin-bottom: 1rem;
 }
 
 .portrait {
-  width: 11rem;
-  aspect-ratio: 1;
+  width: 15rem;
+  aspect-ratio: 2 / 3;
   object-fit: cover;
   border-radius: 8px;
-  filter: saturate(0.85);
 }
 
 .bio-text { display: grid; gap: 1rem; max-width: 36em; }
@@ -642,7 +641,7 @@ strong { font-weight: 800; }
   .index-body { padding-left: calc(3rem + 0.9rem); }
 
   .bio { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
-  .portrait { width: 8rem; }
+  .portrait { width: min(16rem, 75%); }
 
   .ledger li { grid-template-columns: minmax(0, 1fr); gap: 0.15rem; }
 
