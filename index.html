@@ -273,7 +273,7 @@
             Type a sentence in English or Roman Urdu, or say it out loud, and watch it signed by a skeleton animation in real time. The hand-pose component became the paper above.
           </p>
           <ol class="pipeline">
-            <li><strong>Listen.</strong> Spoken input is transcribed to text; typed input starts at the next step.</li>
+            <li><strong>Listen.</strong> Whisper transcribes spoken input to text; typed input starts at the next step.</li>
             <li><strong>Reorder.</strong> NLTK rules move English word order toward PSL grammar.</li>
             <li><strong>Translate to gloss.</strong> A fine-tuned T5-Base writes the PSL gloss. 89.6% accuracy with 4-fold cross-validation.</li>
             <li><strong>Find or generate poses.</strong> Dictionary signs come from a pose lookup; out-of-vocabulary words go through a generative pathway.</li>
