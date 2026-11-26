@@ -146,18 +146,6 @@
   function draw(pts) {
     ctx.clearRect(0, 0, w, h);
 
-    // measurement grid across the whole stage, every 10 units
-    ctx.fillStyle = C.rule;
-    const g0x = Math.ceil(-ox / scale / 10) * 10, g1x = (w - ox) / scale;
-    const g0y = Math.ceil(-oy / scale / 10) * 10, g1y = (h - oy) / scale;
-    for (let gx = g0x; gx <= g1x; gx += 10) {
-      for (let gy = g0y; gy <= g1y; gy += 10) {
-        ctx.beginPath();
-        ctx.arc(X(gx), Y(gy), Math.max(1.1, scale * 0.24), 0, Math.PI * 2);
-        ctx.fill();
-      }
-    }
-
     // fingertip trails
     ctx.lineCap = "round";
     ctx.strokeStyle = C.gold;

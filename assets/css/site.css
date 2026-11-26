@@ -60,7 +60,6 @@ a:hover { color: var(--green-deep); text-decoration-thickness: 2px; }
 :focus-visible {
   outline: 3px solid var(--marigold);
   outline-offset: 3px;
-  border-radius: 2px;
 }
 
 strong { font-weight: 800; }
@@ -80,7 +79,6 @@ strong { font-weight: 800; }
   padding: 0.5rem 0.9rem;
   background: var(--ink);
   color: var(--paper);
-  border-radius: 4px;
 }
 .skip:focus { top: 1rem; color: var(--paper); }
 
@@ -91,9 +89,7 @@ strong { font-weight: 800; }
   position: sticky;
   top: 0;
   z-index: 10;
-  background: color-mix(in srgb, var(--paper) 88%, transparent);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: var(--paper);
   border-bottom: 1px solid var(--rule);
 }
 
@@ -127,10 +123,9 @@ strong { font-weight: 800; }
   color: var(--ink);
   font-size: 1rem;
   text-decoration: none;
-  border-radius: 4px;
 }
 .nav a:hover { background: var(--rule); color: var(--ink); }
-.nav a[aria-current="true"] { color: var(--green); box-shadow: inset 0 -2px 0 var(--green); border-radius: 0; }
+.nav a[aria-current="true"] { color: var(--green); box-shadow: inset 0 -2px 0 var(--green); }
 
 
 /* ---------- Hero ---------- */
@@ -179,14 +174,12 @@ strong { font-weight: 800; }
   align-items: center;
   min-height: 2.875rem;
   padding: 0.55rem 1.25rem;
-  border-radius: 6px;
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
-  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
-.btn-solid { background: var(--green); color: #fff; border: 1.5px solid var(--green); }
-.btn-solid:hover { background: var(--green-deep); border-color: var(--green-deep); color: #fff; }
+.btn-solid { background: var(--green); color: var(--paper); border: 1.5px solid var(--green); }
+.btn-solid:hover { background: var(--green-deep); border-color: var(--green-deep); color: var(--paper); }
 .btn-line { color: var(--ink); border: 1.5px solid var(--ink); }
 .btn-line:hover { background: var(--ink); color: var(--paper); }
 
@@ -225,7 +218,6 @@ strong { font-weight: 800; }
   width: 100%;
   background: var(--paper-raised);
   border: 1px solid var(--rule);
-  border-radius: 10px;
   overflow: hidden;
 }
 .hand-stage canvas { display: block; width: 100%; height: 100%; }
@@ -248,7 +240,6 @@ strong { font-weight: 800; }
   color: var(--ink);
   background: transparent;
   border: 1px solid var(--rule);
-  border-radius: 4px;
   padding: 0.3rem 0.6rem;
   cursor: pointer;
 }
@@ -303,26 +294,23 @@ strong { font-weight: 800; }
 
 .receipt {
   position: relative;
-  padding-left: 1.1rem;
-  border-left: 1.5px solid var(--rule);
+  padding-left: 1.25rem;
   color: var(--moss);
   font-size: 0.9375rem;
   line-height: 1.5;
   font-variant-numeric: tabular-nums;
-  transition: border-color 0.15s ease, color 0.15s ease;
 }
 .receipt::before {
   content: "";
   position: absolute;
-  left: -0.36rem;
-  top: 0.3rem;
+  left: 0;
+  top: 0.45rem;
   width: 0.6rem;
   height: 0.6rem;
   border-radius: 50%;
   background: var(--marigold);
   box-shadow: 0 0 0 1.5px var(--ink);
 }
-.claim:hover .receipt { border-left-color: var(--ink); color: var(--ink); }
 
 
 /* ---------- Roles ---------- */
@@ -518,7 +506,21 @@ strong { font-weight: 800; }
   width: 15rem;
   aspect-ratio: 2 / 3;
   object-fit: cover;
-  border-radius: 8px;
+  background: var(--rule); /* placeholder block while the image loads */
+}
+
+.shot { margin: 0.25rem 0 0.25rem; }
+/* shown at natural size up to the column width, so small captures aren't blurred by stretching */
+.shot img {
+  max-width: 100%;
+  height: auto;
+  background: var(--rule); /* placeholder block while the image loads */
+  border: 1px solid var(--rule);
+}
+.shot figcaption {
+  margin-top: 0.4rem;
+  color: var(--moss);
+  font-size: 0.875rem;
 }
 
 .bio-text { display: grid; gap: 1rem; max-width: 36em; }
@@ -638,7 +640,7 @@ strong { font-weight: 800; }
   .hero-intro { font-size: 1.1875rem; }
 
   .claim { grid-template-columns: minmax(0, 1fr); }
-  .receipt { margin-top: 0.75rem; margin-left: 0.36rem; }
+  .receipt { margin-top: 0.75rem; }
 
   .index summary { grid-template-columns: 3rem minmax(0, 1fr) 1rem; gap: 0.9rem; }
   .tg { display: none; }
@@ -662,5 +664,6 @@ strong { font-weight: 800; }
 @media print {
   .top, .hand, .skip, .actions { display: none; }
   .sec { break-inside: avoid-page; }
-  body { background: #fff; }
 }
+
+.foot p + p { margin-top: 0.6rem; max-width: 46rem; }
