@@ -1,1240 +1,551 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abdullah - Personal Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abdullah Arif, Data and AI Engineer</title>
+  <meta name="description" content="Data and AI engineer in Lahore. BigQuery and GCP pipelines, marketing attribution, customer ML models and RAG apps, plus IEEE-published research on Pakistan Sign Language. Open to remote roles.">
+  <link rel="canonical" href="https://abdullaharifx.github.io/">
+  <meta name="theme-color" content="#F3F5F1">
 
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Abdullah Arif, Data and AI Engineer">
+  <meta property="og:description" content="Data and AI systems that show their work: attribution, automation, customer models, RAG, and sign-language AI research.">
+  <meta property="og:url" content="https://abdullaharifx.github.io/">
+  <meta property="og:image" content="https://abdullaharifx.github.io/assets/images/og-card.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
+  <link rel="icon" href="./assets/images/logo.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
+  <!-- Atkinson's zero is slashed; this loads a plain "0" glyph only, from Public Sans. -->
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,600;0,800;1,400&text=0&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/site.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Abdullah Arif",
+    "jobTitle": "Data and AI Engineer",
+    "url": "https://abdullaharifx.github.io/",
+    "image": "https://abdullaharifx.github.io/assets/images/abdullah-arif.jpg",
+    "address": { "@type": "PostalAddress", "addressLocality": "Lahore", "addressCountry": "PK" },
+    "alumniOf": "National University of Computer and Emerging Sciences (FAST-NUCES), Lahore",
+    "sameAs": ["https://www.linkedin.com/in/abdullaharifx", "https://github.com/abdullaharifx"]
+  }
+  </script>
 </head>
 
 <body>
+  <a class="skip" href="#main">Skip to content</a>
 
-  <!--
-    - #MAIN
-  -->
-
-  <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/logo.png" alt="Richard hanrick" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Abdullah Arif">Abdullah Arif</h1>
-
-          <p class="title">Data Scientist</p>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:business.abdullah.arif@gmail.com" class="contact-link" style="font-size: 11px;" target=”_blank”>business.abdullah.arif@gmail.com</a>
-
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+923224443784" class="contact-link">+92-322-4443784</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="2003-12-03">Dec 29, 2003</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Lahore, Punjab, Pakistan</address>
-            </div>
-
-          </li>
-
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="#top" aria-label="Abdullah Arif, back to top">
+        <img src="./assets/images/logo.png" alt="" width="28" height="28">
+        <span>Abdullah Arif</span>
+      </a>
+      <nav aria-label="Sections">
+        <ul class="nav">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://github.com/abdullaharifx" class="social-link" target=”_blank”>
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-          
-          <li class="social-item">
-            <a href="https://x.com/abdullaharifx" class="social-link" target=”_blank”>
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-          
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/abdullaharifx" class="social-link" target=”_blank”>
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-          
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
-
-        </ul>
-
       </nav>
-
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-               
-          <p><i>How can a machine imitate a human? Can we fully achieve AGI by 2030? </i><br>        </p>
-        <p>
-         I’m <b>Abdullah Arif</b>, finding answers to these questions. Currently a Data Science trailblazer at FAST-NUCES, chasing the electric pulse of AI where algorithms dance with human dreams. I don’t just write code—I sculpt solutions, blending logic with wild imagination to make tech sing.
-        </p>         
-          <p>
-            My journey? It’s a whirlwind of data, creativity, and a sprinkle of chaos. From crafting Urdu voice schedulers that hum with cultural rhythm to building lip-reading systems that amplify silent voices in Pakistan, I wield Python, TensorFlow, and PySpark to turn messy data into dazzling insights.
-          </p>
-        </section>
-        
-        
-    
-
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">What I'm doing</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg
-                " alt="design icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Custom AI/ML Solutions</h4>
-
-                <p class="service-item-text">
-                  Unlock the power of AI with tailored ML models for predictive analytics, automation, and decision-making. I build scalable solutions using TensorFlow, PyTorch, and Scikit-learn to drive your success.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg" alt="data analysis" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Data Visualization</h4>
-
-                <p class="service-item-text">
-                  Turn raw data into compelling stories and actionable insights. Using Pandas, Tableau, and Seaborn, I create intuitive dashboards that empower businesses to make informed and confident decisions.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Computer Vision for Accessibility</h4>
-
-                <p class="service-item-text">
-                            Transform how the world sees with computer vision solutions. I use YOLOv10, OpenCV and multiple such tools to create inclusive tech for real-world impact.
-        </p>
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="camera icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">NLP Solutions</h4>
-
-                <p class="service-item-text">
-                            Bring language to life with intelligent NLP solutions. Using HuggingFace, Whisper, and GPT-4o, I craft seamless, multilingual chatbots and apps that connect users to technology effortlessly.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials
-        -->
-
-        <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Testimonials</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Tahmooras Khan" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Tahmooras Khan - Ebryx</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Abdullah delivered an exceptional Tableau dashboard that exceeded our expectations. Abdullah's concept designs make him a standout collaborator.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Mahad Mudassir" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Mahad Mudassir - Millat</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Collaborating with Abdullah was a pleasure. His dedication and tireless work ethic were evident throughout the project. I’m eager to work with him again.
-
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <!-- <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="marghoob" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Ch. Marghoob - Marghoob Traders</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    I am very happy to have Abdullah by my side. He understands the problems faced by the client and offers well rounded information.
-                  </p>
-                </div>
-
-              </div>
-            </li> -->
-
-            <!-- <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Ashfaq" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Ashfaq - PoshProperties</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Abdullah developed a website for my business overseeing the digital marketing campaigns and branding. I highly recommend Abdullah to anyone who is looking for a reliable person to automate their businesses and services.
-                  </p>
-                </div>
-
-              </div>
-            </li> -->
-
-          </ul>
-
-        </section>
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <!-- <time datetime="2021-06-14">18 April, 2022</time> -->
-
-              <div data-modal-text>
-                <p>
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
-        </div>
-      
-
-        <!--
-          - clients
-        -->
-<!--
-        <section class="clients">
-
-          <h3 class="h3 clients-title">Clients</h3>
-
-          <ul class="clients-list has-scrollbar">
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-1-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-2-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-3-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-4-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-5-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-6-color.png" alt="client logo">
-              </a>
-            </li>
-
-          </ul>
-
-        </section>-->
-
-      </article>
-    
-
-
-
-
-
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">BS-DS (FAST-NUCES)</h4>
-
-              <span>2022 — 2026</span>
-
-              <p class="timeline-text">
-                As a Data Science student, I have immersed myself in a rigorous curriculum, earning Dean’s List honors in Spring 2024.
-              </p>
-              <br>
-              <p class="timeline-text">
-                I served as the Teaching Assistant for the Intro to Data Science course and NLP Research Intern, gaining hands-on experience mentoring peers and developing solutions for accessibility, solidifying my passion for impactful technology.
-              </p>
-              <br>
-              <p class="timeline-text">
-                I have been actively involved in various extracurricular activities, including serving as the Head of SOFTEC, a landmark tech events, where I managed logistics and inventory.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">A-levels (Crescent)</h4>
-
-              <span>2020 — 2022</span>
-`
-           <p class="timeline-text">
-  In Crescent Model Higher Secondary School, I served as the president of debating society from 2021 to 2022. <br><br>
-  I am grateful for having contributed to the society by co-founding Rizq’s Crescent Chapter - Hilal e Rizq - where I led food drives and awareness campaigns that raised over Rs. 100K for community's welfare.
-</p>
-<br>
-<p class="timeline-text">
-I scored an 'A' in Mathematics with 'B' in Physics and Computer Science.
-</p>
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">O-levels (AeS)</h4>
-
-              <span>2017 — 2020</span>
-
-              <p class="timeline-text">
-                It was a major achievement for me to score 8A*s in O-levels - first time in the history of my school, Adabistan-e-Soophia.
-                
-              </p>
-               <br>
-              <p class="timeline-text">
-                It was here that I learned to play basketball, speak infront of a crowd, campaign for headboy elections, and develop a passion for debating and leadership
-              </p>
-              <br>
-          
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
-          </div>
-
-          <ol class="timeline-list">
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">SWE-AI Intern - PureLogics</h4>
-
-              <span>Jul 2025  — Present</span>
-
-              <p class="timeline-text">
-                What makes a great AI model? I'm exploring this question through hands-on experience with cutting-edge technologies.
-              </p>
-
-            </li>
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Research Intern - CLE KICS, UET </h4>
-
-              <span>Jun 2025  — Present</span>
-
-              <p class="timeline-text">
-                Working on research project with 3 other members to produce sign language from voice/text using diffusion based GANs and Progressive Transformers.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">NLP Intern - DS Dept, FAST </h4>
-
-              <span>Jun 2025  — Present</span>
-
-              <p class="timeline-text">
-                How have GenAI/LLMs shaped the students' way of learning? I'm researching this topic using the sentiments and feedback from educators, pupils and industry experts.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Founding SWE - Algofig</h4>
-
-              <span>Jul 2023 — Present</span>
-
-              <p class="timeline-text">
-                A startup focused on building AI-driven solutions for the financial and healthcare sector. My role involves overseeing the development of innovative solutions and ensuring the integration of machine learning models into our products.
-              </p>
-
-            </li>
-
-            
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Web Designer / Digital Marketer - AST</h4>
-
-              <span>Mar 2018 — Nov 2022</span>
-
-              <p class="timeline-text">
-                AST - Alkhair Scientific Traders - is a laboratory equipment supplier. I developed their website using WordPress and managed the social accounts on Twitter, Instagram, and Facebook.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">Skills</h3>
-      
-          <ul class="skills-list content-card">
-      
-              <li class="skills-item">
-                  <div class="title-wrapper">
-                      <h5 class="h5">Python</h5>
-                      <data value="90">90%</data>
-                  </div>
-                  <div class="skill-progress-bg">
-                      <div class="skill-progress-fill" style="width: 90%;"></div>
-                  </div>
-              </li>
-      
-              <li class="skills-item">
-                  <div class="title-wrapper">
-                      <h5 class="h5">SQL</h5>
-                      <data value="85">85%</data>
-                  </div>
-                  <div class="skill-progress-bg">
-                      <div class="skill-progress-fill" style="width: 85%;"></div>
-                  </div>
-              </li>
-      
-              <li class="skills-item">
-                  <div class="title-wrapper">
-                      <h5 class="h5">Machine Learning</h5>
-                      <data value="75">75%</data>
-                  </div>
-                  <div class="skill-progress-bg">
-                      <div class="skill-progress-fill" style="width: 75%;"></div>
-                  </div>
-              </li>
-      
-              <li class="skills-item">
-                  <div class="title-wrapper">
-                      <h5 class="h5">Data Visualization</h5>
-                      <data value="80">80%</data>
-                  </div>
-                  <div class="skill-progress-bg">
-                      <div class="skill-progress-fill" style="width: 80%;"></div>
-                  </div>
-              </li>
-      
-      
-              <li class="skills-item">
-                  <div class="title-wrapper">
-                      <h5 class="h5">Web Development</h5>
-                      <data value="81">80%</data>
-                  </div>
-                  <div class="skill-progress-bg">
-                      <div class="skill-progress-fill" style="width: 81%;"></div>
-                  </div>
-              </li>
-      
-          </ul>
-      </section>
-      
-
-
-      </article>
-
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-<article class="portfolio" data-page="portfolio">
-
-  <header>
-    <h2 class="h2 article-title">Portfolio</h2>
+    </div>
   </header>
 
-  <section class="projects">
+  <main id="main">
 
-    <!-- Filter Buttons -->
-    <ul class="filter-list">
-      <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
-      <li class="filter-item"><button data-filter-btn>Machine Learning</button></li>
-      <li class="filter-item"><button data-filter-btn>Data Analysis</button></li>
-      <li class="filter-item"><button data-filter-btn>NLP</button></li>
-      <li class="filter-item"><button data-filter-btn>Computer Vision</button></li>
-      <li class="filter-item"><button data-filter-btn>Agentic AI</button></li>
-      <li class="filter-item"><button data-filter-btn>Multi Modal AI</button></li>
-    </ul>
-
-    <!-- Mobile Dropdown -->
-    <div class="filter-select-box">
-      <button class="filter-select" data-select>
-        <div class="select-value" data-select-value>Select category</div>
-        <div class="select-icon">
-          <ion-icon name="chevron-down"></ion-icon>
+    <!-- Hero -->
+    <section class="wrap hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-text">
+        <h1 id="hero-title">I build data and AI systems that show their work.</h1>
+        <p class="hero-intro">
+          I'm Abdullah Arif, a data and AI engineer in Lahore. I work remotely with US teams on BigQuery and GCP pipelines, marketing attribution, customer models and RAG apps.
+        </p>
+        <p class="hero-open">
+          Open to remote roles in data engineering, analytics engineering, AI and ML engineering, and data science.
+        </p>
+        <div class="actions">
+          <a class="btn btn-solid" href="mailto:business.abdullah.arif@gmail.com">Email me</a>
+          <a class="btn btn-line" href="https://www.linkedin.com/in/abdullaharifx" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-line" href="https://github.com/abdullaharifx" target="_blank" rel="noopener">GitHub</a>
         </div>
-      </button>
+        <ul class="now" aria-label="Currently">
+          <li>Junior Data Scientist at Los Angeles Apparel, remote</li>
+          <li>Client Director at Exaverse</li>
+          <li>First author, IEEE ICIT 2026</li>
+        </ul>
+      </div>
 
-      <ul class="select-list">
-        <li class="select-item"><button data-select-item>All</button></li>
-        <li class="select-item"><button data-select-item>Machine Learning</button></li>
-        <li class="select-item"><button data-select-item>Data Analysis</button></li> 
-        <li class="select-item"><button data-select-item>NLP</button></li>
-        <li class="select-item"><button data-select-item>Computer Vision</button></li>
-        <li class="select-item"><button data-select-item>Agentic AI</button></li>
-        <li class="select-item"><button data-select-item>Multi Modal AI</button></li>
-      </ul>
-    </div>
-
-    <!-- Projects -->
-    <ul class="project-list">
-
-      <li class="project-item active" data-filter-item data-category="NLP,Multi Modal AI">
-        <div class="project-card" data-project-modal
-             data-title="DORA – Urdu Voice Scheduler"
-             data-description="A full-stack AI-powered calendar assistant that enables Urdu voice-based event creation and scheduling. Features OpenAI Whisper API for Urdu voice transcription, Google Calendar API integration, NextAuth.js authentication, and a responsive frontend built with Next.js, React, and TypeScript. Includes Text-to-Speech scheduling with recurring options and robust timezone-aware event management."
-             data-technologies="Next.js,React,TypeScript,OpenAI Whisper,Google Calendar API,NextAuth.js,Tailwind CSS,Vercel"
-             data-github="https://github.com/abdullaharif381/dora-a3"
-             data-demo=""
-             data-report="">
-
-          <figure class="project-img">
-            <div class="project-item-icon-box">
-              <ion-icon name="eye-outline"></ion-icon>
-            </div>
-            <img src="./assets/images/project-1.jpg" alt="DORA Urdu Voice Scheduler" loading="lazy">
-          </figure>
-
-          <h3 class="project-title">DORA – Urdu Voice Scheduler</h3>
-          <p class="project-category">NLP</p>
-
+      <figure class="hand">
+        <div class="hand-stage">
+          <canvas data-hand role="img" aria-label="A hand skeleton of 21 joints moving between hand shapes, with its fingertip paths traced behind it."></canvas>
         </div>
-      </li>
+        <figcaption>
+          <span>21 hand landmarks in the MediaPipe layout. My sign-language research generates sequences like this one. The gold lines trace each fingertip over time.</span>
+          <button type="button" class="hand-toggle" data-hand-toggle aria-pressed="false">Pause motion</button>
+        </figcaption>
+      </figure>
+    </section>
 
-      <li class="project-item active" data-filter-item data-category="Computer Vision,Multi Modal AI">
-        <div class="project-card" data-project-modal
-             data-title="Lip Reading with LipNet & SyncVSR"
-             data-description="A multimodal visual speech recognition system using deep learning to transcribe silent videos. Implemented LipNet for end-to-end sentence-level lip reading using STCNN + Bi-GRU with CTC loss, and developed SyncVSR for frame-level synchronization of video with quantized audio tokens. Trained on BBC-Oxford LRS2 dataset using PyTorch, OpenCV, DLib, and FaceMesh."
-             data-technologies="PyTorch,OpenCV,DLib,FaceMesh,Deep Learning,Computer Vision,Sequence Modeling"
-             data-github="https://github.com/abdullaharif381/LipReader"
-             data-demo=""
-             data-report="lip-reader-report.pdf">
 
-          <figure class="project-img">
-            <div class="project-item-icon-box">
-              <ion-icon name="eye-outline"></ion-icon>
-            </div>
-            <img src="./assets/images/project-2.png" alt="Lip Reading System" loading="lazy">
-          </figure>
-
-          <h3 class="project-title">Lip Reading with LipNet & SyncVSR</h3>
-          <p class="project-category">Computer Vision</p>
-
-        </div>
-      </li>
-
-      <li class="project-item active" data-filter-item data-category="Data Analysis,Machine Learning">
-        <div class="project-card" data-project-modal
-             data-title="Video Game Success Prediction"
-             data-description="Predicted regional sales success of video games (Japan, Europe, America) before launch using comprehensive data science techniques. Utilized Python for exploratory data analysis, web scraping for data collection, and advanced algorithm design for predictive modeling. Analyzed market trends and consumer behavior patterns to forecast game performance across different geographical markets."
-             data-technologies="Python,Data Analysis,Web Scraping,Predictive Modeling,EDA,Market Analysis"
-             data-github="https://github.com/abdullaharif381"
-             data-demo=""
-             data-report="">
-
-          <figure class="project-img">
-            <div class="project-item-icon-box">
-              <ion-icon name="eye-outline"></ion-icon>
-            </div>
-            <img src="./assets/images/project-3.jpg" alt="Video Game Success Prediction" loading="lazy">
-          </figure>
-
-          <h3 class="project-title">Video Game Success Prediction</h3>
-          <p class="project-category">Data Analysis</p>
-
-        </div>
-      </li>
-
-      <li class="project-item active" data-filter-item data-category="Computer Vision,Machine Learning">
-        <div class="project-card" data-project-modal
-             data-title="Facial Emotion Recognition with PySpark"
-             data-description="Built a scalable pipeline for facial emotion detection using big data tools. Used PySpark to process large image datasets and implemented CNN-based classifiers to identify 6 emotion classes. Integrated annotation tools and visualization modules for comprehensive emotion analysis. Designed for distributed processing of massive image datasets with high accuracy emotion classification."
-             data-technologies="PySpark,CNN,Big Data Analytics,Image Classification,Distributed Processing,Computer Vision"
-             data-github="https://github.com/abdullaharif381"
-             data-demo=""
-             data-report="">
-
-          <figure class="project-img">
-            <div class="project-item-icon-box">
-              <ion-icon name="eye-outline"></ion-icon>
-            </div>
-            <img src="./assets/images/project-4.png" alt="Facial Emotion Recognition" loading="lazy">
-          </figure>
-
-          <h3 class="project-title">Facial Emotion Recognition (PySpark)</h3>
-          <p class="project-category">Computer Vision</p>
-
-        </div>
-      </li>
-
-      <li class="project-item active" data-filter-item data-category="Data Analysis">
-        <div class="project-card" data-project-modal
-             data-title="Chem Ease – Inventory Management"
-             data-description="Desktop application for managing chemical inventory in a retail lab supply setting for Alkhair Scientific Traders. Built using C# and WinForms with OCR implementation for label scanning and search functionality. Developed following Agile/Scrum methodology with sprints, Trello project management, and paired programming practices."
-             data-technologies="C#,WinForms,OCR,Agile,Scrum,Object-Oriented Programming,Desktop Development"
-             data-github="https://github.com/abdullaharif381"
-             data-demo=""
-             data-report="Presentation.pptx">
-
-          <figure class="project-img">
-            <div class="project-item-icon-box">
-              <ion-icon name="eye-outline"></ion-icon>
-            </div>
-            <img src="./assets/images/project-5.png" alt="Chem Ease Inventory" loading="lazy">
-          </figure>
-
-          <h3 class="project-title">Chem Ease – Inventory Management</h3>
-          <p class="project-category">Data Analysis</p>
-
-        </div>
-      </li>
-
-      <li class="project-item active" data-filter-item data-category="Machine Learning,Data Analysis">
-        <div class="project-card" data-project-modal
-             data-title="Used Car Price Prediction Pakistan"
-             data-description="Developed an XGBoost regression model to predict car resale values in the Pakistani market with 97% accuracy. Features comprehensive data visualization with Tableau, interactive Streamlit dashboard, and geospatial filtering based on registration city and model year. Includes advanced feature engineering and market trend analysis for accurate price predictions."
-             data-technologies="XGBoost,Scikit-learn,Streamlit,Tableau,Python,Data Engineering,ML Regression"
-             data-github="https://github.com/abdullaharif381"
-             data-demo="https://car-price-prediction-pk.streamlit.app"
-             data-report="">
-
-          <figure class="project-img">
-            <div class="project-item-icon-box">
-              <ion-icon name="eye-outline"></ion-icon>
-            </div>
-            <img src="./assets/images/project-6.png" alt="Car Price Prediction" loading="lazy">
-          </figure>
-
-          <h3 class="project-title">Used Car Price Prediction Pakistan</h3>
-          <p class="project-category">Machine Learning</p>
-
-        </div>
-      </li>
-
-      <li class="project-item active" data-filter-item data-category="Computer Vision">
-        <div class="project-card" data-project-modal
-             data-title="Brick Counter using OpenCV"
-             data-description="Created an image analysis system to count bricks in photographs for industrial applications. Utilized OpenCV for advanced contour detection and edge processing techniques. Built with Python, NumPy, and Matplotlib for comprehensive image preprocessing and analysis. Designed for automated counting in construction and manufacturing environments."
-             data-technologies="OpenCV,Python,NumPy,Matplotlib,Image Processing,Object Detection,Computer Vision"
-             data-github="https://github.com/abdullaharif381"
-             data-demo=""
-             data-report="">
-
-          <figure class="project-img">
-            <div class="project-item-icon-box">
-              <ion-icon name="eye-outline"></ion-icon>
-            </div>
-            <img src="./assets/images/project-7.png" alt="Brick Counter" loading="lazy">
-          </figure>
-
-          <h3 class="project-title">Brick Counter using OpenCV</h3>
-          <p class="project-category">Computer Vision</p>
-
-        </div>
-      </li>
-
-      <li class="project-item active" data-filter-item data-category="Computer Vision">
-        <div class="project-card" data-project-modal
-             data-title="Volume Control with Hand Gestures"
-             data-description="Developed a real-time computer vision system for gesture-based volume control using advanced hand tracking technology. Implemented OpenCV and MediaPipe for accurate gesture recognition with PyCaw and Pythoncom for seamless audio control integration. Features real-time processing for smooth human-computer interaction experience."
-             data-technologies="OpenCV,MediaPipe,PyCaw,Pythoncom,Computer Vision,Gesture Recognition,Real-Time Processing"
-             data-github="https://github.com/abdullaharif381"
-             data-demo=""
-             data-report="">
-
-          <figure class="project-img">
-            <div class="project-item-icon-box">
-              <ion-icon name="eye-outline"></ion-icon>
-            </div>
-            <img src="./assets/images/project-8.jpg" alt="Hand Gesture Volume Control" loading="lazy">
-          </figure>
-
-          <h3 class="project-title">Volume Control with Hand Gestures</h3>
-          <p class="project-category">Computer Vision</p>
-
-        </div>
-      </li>
-    </ul>
-
-  </section>
-
-  <!-- Project Modal -->
-  <div class="project-modal-container" data-project-modal-container>
-    <div class="project-overlay" data-project-overlay></div>
-    
-    <section class="project-modal">
-      <button class="project-modal-close-btn" data-project-modal-close>
-        <ion-icon name="close-outline"></ion-icon>
-      </button>
-      
-      <div class="project-modal-content">
-        <div class="project-modal-header">
-          <h2 class="project-modal-title" data-project-modal-title></h2>
-          <div class="project-modal-technologies" data-project-modal-technologies></div>
-        </div>
-        
-        <div class="project-modal-description" data-project-modal-description></div>
-        
-        <div class="project-modal-actions">
-          <a href="#" class="btn btn-primary" data-project-modal-github target="_blank">
-            <ion-icon name="logo-github"></ion-icon>
-            View GitHub
-          </a>
-          <a href="#" class="btn btn-secondary" data-project-modal-demo target="_blank">
-            <ion-icon name="open-outline"></ion-icon>
-            Live Demo
-          </a>
-          <a href="#" class="btn btn-tertiary" data-project-modal-report target="_blank">
-            <ion-icon name="document-text-outline"></ion-icon>
-            Read Report
-          </a>
-        </div>
+    <!-- How I work -->
+    <section class="wrap sec" id="method" aria-labelledby="method-title">
+      <h2 class="sec-title" id="method-title">How I work</h2>
+      <div class="sec-body">
+        <p class="sec-intro">
+          Four habits, each backed by real work. Throughout this page, the notes on the right say what was measured and how.
+        </p>
+        <ul class="claims">
+          <li class="claim">
+            <p class="claim-text"><strong>Measure before changing.</strong> A warehouse migration started with a map of every dependency and a dry run of every rewrite, not with a guess.</p>
+            <p class="receipt">Mapped 211 views, 40 tables and 68 scheduled queries before touching any of them.</p>
+          </li>
+          <li class="claim">
+            <p class="claim-text"><strong>Reconcile every number.</strong> If two reports disagree, one of them is wrong, and I find out which.</p>
+            <p class="receipt">Attribution views cover 100% of revenue with no double counting. Automated campaign spend matched the Google Ads API at 98.9%.</p>
+          </li>
+          <li class="claim">
+            <p class="claim-text"><strong>Ship only what passes.</strong> A good demo isn't the bar. A model or agent goes live when it holds up on the checks that matter.</p>
+            <p class="receipt">Held back a purchase-propensity model with AUC 0.85 because it failed calibration. The agent platform we delivered passed 21 of 21 tenant-isolation checks.</p>
+          </li>
+          <li class="claim">
+            <p class="claim-text"><strong>Keep a way back.</strong> Changes to production data come with a diff that proves nothing moved, and a script that undoes them.</p>
+            <p class="receipt">55 rewritten warehouse objects shipped with byte-identical diff checks and rollback scripts.</p>
+          </li>
+        </ul>
       </div>
     </section>
-  </div>
-
-</article>
 
 
+    <!-- Work -->
+    <section class="wrap sec" id="work" aria-labelledby="work-title">
+      <h2 class="sec-title" id="work-title">Work</h2>
+      <div class="sec-body">
 
+        <article class="role">
+          <header class="role-head">
+            <h3>Los Angeles Apparel</h3>
+            <p class="role-meta">Junior Data Scientist. Full-time, remote from Lahore. March 2026 to present.</p>
+            <p class="role-lede">
+              A US apparel brand with its own online store. Reporting to the CTO, I work on sales growth and marketing efficiency: where revenue comes from, where ad budget should go, and what the data warehouse costs to run.
+            </p>
+          </header>
 
-
-
-      <!--
-        - #BLOG
-      -->
-
-      <article class="blog" data-page="blog">
-
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Machine Learning</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
-
-                </div>
-
-              </a>
+          <h4 class="group">Attribution and ad spend</h4>
+          <ul class="claims">
+            <li class="claim">
+              <p class="claim-text">Built U-shaped and three-model multi-touch attribution. It still decides where ad budget goes.</p>
+              <p class="receipt">Campaign and non-campaign sales views together cover 100% of revenue, each order counted once. Comparing models showed Meta cost per purchase shifting more than tenfold depending on the method.</p>
             </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
-                </div>
-
-              </a>
+            <li class="claim">
+              <p class="claim-text">Automated budget changes across 53 campaigns, and ran Google Shopping campaigns end to end.</p>
+              <p class="receipt">Seven live runs of budget automation v2 made 38 budget changes and 26 pauses. An hourly Cloud Function pulls Google Ads data; automated spend matched the Google Ads API at 98.9%.</p>
             </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
-                </div>
-
-              </a>
+            <li class="claim">
+              <p class="claim-text">Built product feeds of 31,000 to 33,000 items for Google, OpenAI, Awin and AvantLink, plus a local inventory feed.</p>
+              <p class="receipt">The AvantLink feed carries 1,409 items in five currencies.</p>
             </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
           </ul>
 
-        </section>
+          <h4 class="group">Warehouse cost</h4>
+          <ul class="claims">
+            <li class="claim">
+              <p class="claim-text">Cut bytes scanned on core ad-spend views by 75 to 83% by moving reporting to a standby dataset.</p>
+              <p class="receipt">Rewrote 55 objects, each checked with a byte-identical diff and shipped with a rollback script.</p>
+            </li>
+            <li class="claim">
+              <p class="claim-text">Audited BigQuery and Looker Studio spend and found an estimated $894 a month in fixes.</p>
+              <p class="receipt">The audit covered roughly 240 to 262 TB scanned a month. I switched off an hourly full-table rebuild, and materializing one view took it from about $1.03 to $0.04 a run.</p>
+            </li>
+          </ul>
 
-      </article>
+          <h4 class="group">Customer models and analysis</h4>
+          <ul class="claims">
+            <li class="claim">
+              <p class="claim-text">Built a win-back model for 415,000 customers. AUC 0.80, with the top decile coming back at 4.07 times the baseline rate.</p>
+              <p class="receipt">Scored 407K customers and narrowed them to 84,217 who could be emailed. 19 email batches reached 54,882 people and brought in 517 orders.</p>
+            </li>
+            <li class="claim">
+              <p class="claim-text">Didn't ship a purchase-propensity model, even with AUC 0.85 and 5.5 times lift.</p>
+              <p class="receipt">It ranked customers well but failed calibration. A model whose probabilities don't match real purchase rates can't be trusted to size a budget.</p>
+            </li>
+            <li class="claim">
+              <p class="claim-text">Ran a market-basket analysis on 555,000 orders, plus customer segmentation and product-level performance reports.</p>
+              <p class="receipt">Found 102 frequent three-item sets and 93 association rules.</p>
+            </li>
+            <li class="claim">
+              <p class="claim-text">Caught data problems before they reached a dashboard.</p>
+              <p class="receipt">10,508 product variants with image problems, a threefold rise in bot viewers, and 60,426 Attentive conversions classified.</p>
+            </li>
+          </ul>
+
+          <p class="role-foot">
+            In eight months: about 280 SQL files, 105 Python scripts and 65 reports. Tools: BigQuery, Cloud Functions, Secret Manager, IAM, Looker Studio, Python, Google Ads API, Meta Ads.
+          </p>
+        </article>
+
+        <article class="role">
+          <header class="role-head">
+            <h3>Exaverse</h3>
+            <p class="role-meta">Client Director. Remote, Lahore. Since November 2025.</p>
+            <p class="role-lede">
+              Exaverse builds AI and software for international clients. I scope and price projects, lead delivery with the engineering team, and stay with each client after launch.
+            </p>
+          </header>
+
+          <ul class="claims">
+            <li class="claim">
+              <p class="claim-text">Kept a UAE client for over a year, from a first Upwork project to a direct monthly retainer.</p>
+              <p class="receipt">The work grew from one fixed-price app to a BigQuery data layer I built, on retainer since August 2026.</p>
+            </li>
+            <li class="claim">
+              <p class="claim-text">PropFM (first called FacilityFirst): facility management for the UAE on web, iOS and Android.</p>
+              <p class="receipt">Service requests, documents and SLA compliance. About 20 weeks in Flutter and Firebase, later moved to Cloudflare D1. Built with Hashir and Mannan.</p>
+            </li>
+            <li class="claim">
+              <p class="claim-text">C.O.R.E, an agent platform that answers questions for several separate tenants.</p>
+              <p class="receipt">93% of 84 test questions answered correctly, 85% of unanswerable ones handled safely, 21 of 21 tenant-isolation checks passed, replies in about 1.3 seconds.</p>
+            </li>
+            <li class="claim">
+              <p class="claim-text">The Halabrix website, with a chatbot and Arabic right-to-left support.</p>
+              <p class="receipt">Astro 5 on Cloudflare Pages, about 100 commits.</p>
+            </li>
+          </ul>
+          <p class="role-foot">
+            Also: a payroll proof of concept demoed to a prospective client's CEO, a coaching-agent proof of concept, and a fix for a GSM voice agent over TLS SIP.
+          </p>
+        </article>
+
+        <article class="role role-compact">
+          <h3>Earlier</h3>
+          <ul class="earlier">
+            <li>
+              <p class="earlier-head"><strong>PureLogics</strong>, Software Engineer Intern. July to September 2025.</p>
+              <p>Built ChatPDF, a RAG app that answers questions across PDFs with page citations; an MVC Flask app for internal operations; and an n8n pipeline for small-business marketing outreach.</p>
+              <p class="links"><a href="https://github.com/abdullaharifx/reddit-outreach-n8n" target="_blank" rel="noopener">Outreach pipeline code</a></p>
+            </li>
+            <li>
+              <p class="earlier-head"><strong>Center for Language Engineering, KICS, UET Lahore</strong>, Research Officer Intern. June to August 2025.</p>
+              <p>Computer vision and NLP for Pakistan's hearing-impaired community. Fine-tuned mBART on a text–gloss corpus for the text-to-gloss stage of a sign-language production system.</p>
+              <p class="links"><a href="https://github.com/abdullaharifx/Text2Gloss" target="_blank" rel="noopener">Text2Gloss code</a></p>
+            </li>
+            <li>
+              <p class="earlier-head"><strong>FAST-NUCES</strong>, NLP Research Intern. June to August 2025.</p>
+              <p>Studied how students use generative AI in education, and where research on LLMs and human-computer interaction leaves gaps for undergraduate and graduate learners.</p>
+              <p class="links"><a href="https://github.com/abdullaharifx/LLM-EduImpact" target="_blank" rel="noopener">LLM-EduImpact code</a></p>
+            </li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
 
 
+    <!-- Research -->
+    <section class="wrap sec" id="research" aria-labelledby="research-title">
+      <h2 class="sec-title" id="research-title">Research</h2>
+      <div class="sec-body">
+
+        <article class="paper">
+          <p class="paper-venue">IEEE, 2026 International Conference on IT and Industrial Technologies (ICIT)</p>
+          <h3 class="paper-title">A Comparative Study of Transformer and Conditional VAE for Pakistan Sign Language Hand Pose Generation</h3>
+          <p class="paper-authors">Abdullah Arif, Amna Musharaf, Muhammad Saif ul Islam</p>
+          <ul class="claims">
+            <li class="claim">
+              <p class="claim-text">Pakistan Sign Language has very little training data. We compared a Transformer with a conditional variational autoencoder for generating hand poses from gloss: which learns pose better, and which holds up on signs it hasn't seen.</p>
+              <p class="receipt">Transformer with 4 layers, 512-dimensional embeddings and 8 attention heads, against a multilayer cVAE. Both trained on a public PSL dataset, with keypoints normalized to remove differences between signers. Scored by mean squared error, cosine similarity and a qualitative review of poses.</p>
+            </li>
+          </ul>
+          <p class="links"><a href="https://doi.org/10.1109/ICIT68548.2026.11577715" target="_blank" rel="noopener">Read the paper on IEEE Xplore</a></p>
+        </article>
+
+        <article class="fyp">
+          <h3>Zaban-e-Ishara: typed text to Pakistan Sign Language</h3>
+          <p class="role-meta">Final-year project, August 2025 to May 2026. With Amna Musharaf and Tahmooras Khan, supervised by Saif Ul Islam.</p>
+          <p class="role-lede">
+            Type a sentence in English or Roman Urdu and watch it signed by a skeleton animation in real time. The hand-pose component became the paper above.
+          </p>
+          <ol class="pipeline">
+            <li><strong>Reorder.</strong> NLTK rules move English word order toward PSL grammar.</li>
+            <li><strong>Translate to gloss.</strong> A fine-tuned T5-Base writes the PSL gloss. 89.6% accuracy with 4-fold cross-validation.</li>
+            <li><strong>Find or generate poses.</strong> Dictionary signs come from a pose lookup; out-of-vocabulary words go through a generative pathway.</li>
+            <li><strong>Animate.</strong> FastAPI and Next.js render a 225-point MediaPipe skeleton in the browser.</li>
+          </ol>
+        </article>
+
+      </div>
+    </section>
 
 
+    <!-- Projects -->
+    <section class="wrap sec" id="projects" aria-labelledby="projects-title">
+      <h2 class="sec-title" id="projects-title">Projects</h2>
+      <div class="sec-body">
+        <p class="sec-intro">University and side projects, newest first. Open a row for the details.</p>
 
-      <!--
-        - #CONTACT
-      -->
+        <ul class="index">
+          <li>
+            <details>
+              <summary>
+                <span class="yr">2025</span>
+                <span class="nm"><strong>ChatPDF</strong> Ask a stack of PDFs a question and get an answer that cites the page.</span>
+                <span class="tg">RAG, LLMs</span>
+              </summary>
+              <div class="index-body">
+                <p>Multi-PDF upload, semantic search, chat memory, a side-by-side PDF view with page-number citations, speech in and out, a choice of Qwen or Gemini, an editable system prompt, several chat sessions and login. Built at PureLogics under senior engineer Saeed Hassan.</p>
+                <p class="tools">Flask, Jinja2, HTMX, LangChain, ChromaDB, MiniLM embeddings, SQLite, Web Speech API, Groq and Gemini APIs</p>
+                <p class="links"><a href="https://github.com/abdullaharifx/PL-Work/tree/main/LangChain/ChatPDF" target="_blank" rel="noopener">Code</a></p>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>
+                <span class="yr">2025</span>
+                <span class="nm"><strong>DORA</strong> Say a plan in Urdu and get a Google Calendar event.</span>
+                <span class="tg">Speech, LLMs</span>
+              </summary>
+              <div class="index-body">
+                <p>Whisper transcribes Urdu speech, GPT-4o pulls out the event details, Pinecone stores context, and the Google Calendar API books it. Google sign-in with NextAuth. Built with Kabir Ud Din Shahab, Tahmooras Khan and Ibtehaj Ali.</p>
+                <p class="tools">Next.js, TypeScript, Tailwind CSS, Radix UI, OpenAI Whisper, GPT-4o, Pinecone, Google Calendar API, NextAuth, Vercel</p>
+                <p class="links"><a href="https://dora-urdu-voice-scheduler.vercel.app" target="_blank" rel="noopener">Live app</a> <a href="https://github.com/abdullaharifx/dora-a3" target="_blank" rel="noopener">Code</a></p>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>
+                <span class="yr">2025</span>
+                <span class="nm"><strong>Lip reading</strong> Turn silent video of a speaker into text.</span>
+                <span class="tg">Computer vision</span>
+              </summary>
+              <div class="index-body">
+                <p>First LipNet: spatiotemporal CNNs with bidirectional GRUs trained with CTC loss, on the GRID dataset. Then SyncVSR, which aligns visual features with quantized audio tokens for frame-level supervision, on the Oxford-BBC LRS2 dataset of BBC television sentences. Measured by word error rate, with a Flask demo. Built with Tahmooras Khan and Ibtehaj Ali.</p>
+                <p class="tools">PyTorch, OpenCV, Dlib, MediaPipe FaceMesh, Wav2Vec2, ResNet-34, Flask</p>
+                <p class="links"><a href="https://github.com/abdullaharifx/LipReader" target="_blank" rel="noopener">Code</a></p>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>
+                <span class="yr">2025</span>
+                <span class="nm"><strong>Outreach automation</strong> Find and contact small-business leads on Reddit without doing it by hand.</span>
+                <span class="tg">Automation</span>
+              </summary>
+              <div class="index-body">
+                <p>An n8n pipeline built at PureLogics for small-business marketing and outreach.</p>
+                <p class="tools">n8n</p>
+                <p class="links"><a href="https://github.com/abdullaharifx/reddit-outreach-n8n" target="_blank" rel="noopener">Code</a></p>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>
+                <span class="yr">2024</span>
+                <span class="nm"><strong>Video game success</strong> Predict before release how a game will sell in Japan, North America and Europe.</span>
+                <span class="tg">Machine learning</span>
+              </summary>
+              <div class="index-body">
+                <p>Scraped game data from the web, explored it, and modeled regional success ahead of launch. Built with Talha.</p>
+                <p class="tools">Python, web scraping, exploratory data analysis</p>
+                <p class="links"><a href="https://github.com/abdullaharifx/multimodal-game-success-prediction" target="_blank" rel="noopener">Code</a></p>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>
+                <span class="yr">2024</span>
+                <span class="nm"><strong>Facial emotion recognition</strong> Read six emotions from faces, trained across a Spark cluster.</span>
+                <span class="tg">Computer vision</span>
+              </summary>
+              <div class="index-body">
+                <p>A CNN trained on 50,000+ face images, with PySpark handling the data as distributed frames. 91% accuracy and five times faster training. Built with Tahmooras Khan.</p>
+                <p class="tools">PySpark, TensorFlow, CNNs</p>
+                <p class="links"><a href="https://github.com/abdullaharifx/FER_PySpark" target="_blank" rel="noopener">Code</a></p>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>
+                <span class="yr">2024</span>
+                <span class="nm"><strong>Chem Ease</strong> Inventory management for a scientific supplies trader.</span>
+                <span class="tg">Software</span>
+              </summary>
+              <div class="index-body">
+                <p>A desktop app sponsored by Alkhair Scientific Traders, built in sprints with scrum and pair programming. Built with Kabir and Yousha.</p>
+                <p class="tools">C#, WinForms</p>
+                <p class="links"><a href="https://github.com/abdullaharifx/FSE_Project" target="_blank" rel="noopener">Code</a></p>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>
+                <span class="yr">2023</span>
+                <span class="nm"><strong>Used-car prices</strong> Estimate a fair price for a used car in Pakistan.</span>
+                <span class="tg">Machine learning</span>
+              </summary>
+              <div class="index-body">
+                <p>An XGBoost regression model on PakWheels listings (scraped by Muhammad Waqar Gul, via Kaggle) at 97% accuracy, with maps of prices by city. Built with Tahmooras Khan.</p>
+                <p class="tools">Python, XGBoost, scikit-learn, Folium, GeoJSON, Tableau</p>
+                <p class="links"><a href="https://github.com/abdullaharifx/car_prediction_deploy" target="_blank" rel="noopener">Code</a></p>
+              </div>
+            </details>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-      <article class="contact" data-page="contact">
 
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
+    <!-- About -->
+    <section class="wrap sec" id="about" aria-labelledby="about-title">
+      <h2 class="sec-title" id="about-title">About</h2>
+      <div class="sec-body">
 
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/place/FAST+NUCES+Lahore/@31.4815212,74.3030141,15z/data=!4m2!3m1!1s0x0:0x47e934f4cd34790?sa=X&ved=1t:2428&ictx=111"
-              width="400" height="300" loading="lazy"></iframe>
+        <div class="bio">
+          <img class="portrait" src="./assets/images/abdullah-arif.jpg" alt="Abdullah Arif" width="640" height="640" loading="lazy">
+          <div class="bio-text">
+            <p>
+              I studied data science at FAST-NUCES in Lahore and graduated in 2026. Most of my research there went into Pakistan Sign Language, which has very little data and few tools: a text-to-gloss model at CLE-KICS, a final-year project that signs typed sentences, and an IEEE paper on generating hand poses.
+            </p>
+            <p>
+              Now I work on two sides of applied data. Inside a US e-commerce brand, I build attribution, campaign automation and customer models. With clients at Exaverse, I scope the work and stay on after launch.
+            </p>
+            <p>
+              Next, I want to bring the same habits to healthcare and MedTech AI, supply chain and traceability, or Islamic fintech.
+            </p>
+          </div>
+        </div>
+
+        <h3 class="sub">Teaching</h3>
+        <ul class="ledger">
+          <li>
+            <span class="when">2024–2025</span>
+            <span class="what"><strong>Teaching Assistant, FAST-NUCES.</strong> Assisted Saif ul Islam in Fall 2024 and Fall 2025 on Data Analysis and Visualization (DS3001) and Introduction to Data Science (DS2001), both with labs: about 100 students each.</span>
+          </li>
+          <li>
+            <span class="when">2026</span>
+            <span class="what"><strong>Computer Science Teacher, United Charter Schools, Lahore.</strong> Taught classes 6 to 8. Wrote my own chapter tests and ran a Scratch Pac-Man project and an Excel home-budget assignment. Class 8 results ranged from 71% to 89%.</span>
+          </li>
+        </ul>
+
+        <h3 class="sub">Education</h3>
+        <ul class="ledger">
+          <li>
+            <span class="when">2022–2026</span>
+            <span class="what"><strong>BS Data Science, FAST-NUCES Lahore.</strong> Dean's Honour List in Spring 2024 and Fall 2025.</span>
+          </li>
+          <li>
+            <span class="when">2020–2022</span>
+            <span class="what"><strong>A-levels, Crescent Model Higher Secondary School.</strong> Mathematics, Physics and Computer Science on a 100% merit scholarship. President of the Debating Society and member of the Student Council.</span>
+          </li>
+          <li>
+            <span class="when">2017–2020</span>
+            <span class="what"><strong>O-levels, Adabistan-e-Soophia School.</strong> 8 A*s. Basketball, debating, and a run for head boy.</span>
+          </li>
+        </ul>
+
+        <h3 class="sub">Recognition</h3>
+        <ul class="ledger">
+          <li>
+            <span class="when">2026</span>
+            <span class="what"><strong>Dean's Honour List, twice.</strong> FAST-NUCES, Spring 2024 and Fall 2025.</span>
+          </li>
+          <li>
+            <span class="when">2023</span>
+            <span class="what"><strong>Outstanding Diplomat, ICCUCP MUN-VI.</strong> Crisis Committee, as the delegate of Bahrain.</span>
+          </li>
+          <li>
+            <span class="when">2021</span>
+            <span class="what"><strong>100% academic merit scholarship.</strong> Crescent Model Higher Secondary School, for 8 A*s at O-level.</span>
+          </li>
+        </ul>
+
+        <h3 class="sub">Certifications</h3>
+        <ul class="ledger">
+          <li><span class="when">2026</span><span class="what"><strong>Forward Deployed Engineering in the Age of AI.</strong> LinkedIn Learning.</span></li>
+          <li><span class="when">2024</span><span class="what"><strong>Advanced Learning Algorithms.</strong> DeepLearning.AI.</span></li>
+          <li><span class="when">2024</span><span class="what"><strong>Supervised Machine Learning: Regression and Classification.</strong> Stanford Online and DeepLearning.AI.</span></li>
+          <li><span class="when">2023</span><span class="what"><strong>Microsoft Certified: Azure AI Fundamentals.</strong> Credential 27C352F9D8BD584C.</span></li>
+          <li><span class="when">2023</span><span class="what"><strong>Artificial Intelligence, NAVTTC PMYSDP.</strong> Corvit Systems: Python, machine learning, CNNs, computer vision, Kafka, Spark and Tableau, 70% lab work.</span></li>
+          <li><span class="when">2023</span><span class="what"><strong>Intermediate Machine Learning.</strong> Kaggle.</span></li>
+          <li><span class="when">2023</span><span class="what"><strong>Prime Minister's Youth Programme certificate.</strong> AI and CNNs.</span></li>
+        </ul>
+
+        <h3 class="sub">Leadership and volunteering</h3>
+        <ul class="ledger">
+          <li>
+            <span class="when">2023–2025</span>
+            <span class="what"><strong>Head of Logistics, SOFTEC.</strong> Deputy head for a year, then head. Planned budgets, procurement and setup, supervised deputies and volunteers, and fixed shortages on the day.</span>
+          </li>
+          <li>
+            <span class="when">2022</span>
+            <span class="what"><strong>Founder and Vice President, Hilal-e-Rizq.</strong> Started and named the Crescent chapter of Rizq, a Lahore social enterprise working to end hunger. Ran HR and training, raised funds for families in Miameer, and recruited the 2022–23 executive council.</span>
+          </li>
+          <li>
+            <span class="when">2022–2024</span>
+            <span class="what"><strong>FAST Society of Data Science and GDSC FAST-NU Lahore.</strong> Marketed the data scraping and visualization competitions at SOFTEC 2023; community volunteer at GDSC.</span>
+          </li>
+          <li>
+            <span class="when">2020–2022</span>
+            <span class="what"><strong>Content writer, Ehsas-e-Zimedaari.</strong> Meeting minutes and social posts for a social-services group.</span>
+          </li>
+          <li>
+            <span class="when">2019–2020</span>
+            <span class="what"><strong>Social media volunteer, UNICEF Pakistan.</strong> Facebook admin of Meri Awaz Suno, a page marking 30 years of the Convention on the Rights of the Child.</span>
+          </li>
+        </ul>
+
+        <h3 class="sub">In their words</h3>
+        <div class="quotes">
+          <figure class="quote">
+            <blockquote><p>Hardworking, dedicated, and motivated. I also supervised his Final Year Project, which resulted in a productive Pakistan Sign Language tool and a conference publication. Highly recommended.</p></blockquote>
+            <figcaption><strong>Saif Ul Islam</strong> Lecturer and data scientist, FAST-NUCES. Supervised my final-year project.</figcaption>
           </figure>
-        </section>
+          <figure class="quote">
+            <blockquote><p>Excellent leadership qualities and task management when it comes to projects. Strong grip on programming skills and algorithms.</p></blockquote>
+            <figcaption><strong>Ibtehaj Ali</strong> Software engineer, Denovonet. Teammate on DORA and lip reading.</figcaption>
+          </figure>
+        </div>
 
-        <section class="contact-form">
+      </div>
+    </section>
 
-          <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="#" class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-
-          </form>
-
-        </section>
-
-      </article>
-
-    </div>
+    <!-- Contact -->
+    <section class="wrap sec contact" id="contact" aria-labelledby="contact-title">
+      <h2 class="sec-title" id="contact-title">Contact</h2>
+      <div class="sec-body">
+        <p class="contact-lead">Let's talk.</p>
+        <p><a class="contact-mail" href="mailto:business.abdullah.arif@gmail.com">business.abdullah.arif@gmail.com</a></p>
+        <ul class="contact-list">
+          <li><a href="https://www.linkedin.com/in/abdullaharifx" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/abdullaharifx" target="_blank" rel="noopener">GitHub</a></li>
+          <li>Lahore, Pakistan (UTC+5)</li>
+        </ul>
+        <p class="contact-roles">
+          Looking for remote work as a data engineer, analytics engineer, AI engineer, machine learning engineer or data scientist. Exaverse also takes on client projects in data, automation and AI.
+        </p>
+      </div>
+    </section>
 
   </main>
 
+  <footer class="wrap foot">
+    <p>© 2026 Abdullah Arif. Set in Atkinson Hyperlegible Next, a typeface designed for readers with low vision.</p>
+  </footer>
 
-
-
-
-
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon links
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+  <script src="./assets/js/site.js" defer></script>
 </body>
-
 </html>
