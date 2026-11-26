@@ -267,12 +267,13 @@
         </article>
 
         <article class="fyp">
-          <h3>Zaban-e-Ishara: typed text to Pakistan Sign Language</h3>
+          <h3>Zaban-e-Ishara: text and speech to Pakistan Sign Language</h3>
           <p class="role-meta">Final-year project, August 2025 to May 2026. With Amna Musharaf and Tahmooras Khan, supervised by Saif Ul Islam.</p>
           <p class="role-lede">
-            Type a sentence in English or Roman Urdu and watch it signed by a skeleton animation in real time. The hand-pose component became the paper above.
+            Type a sentence in English or Roman Urdu, or say it out loud, and watch it signed by a skeleton animation in real time. The hand-pose component became the paper above.
           </p>
           <ol class="pipeline">
+            <li><strong>Listen.</strong> Spoken input is transcribed to text; typed input starts at the next step.</li>
             <li><strong>Reorder.</strong> NLTK rules move English word order toward PSL grammar.</li>
             <li><strong>Translate to gloss.</strong> A fine-tuned T5-Base writes the PSL gloss. 89.6% accuracy with 4-fold cross-validation.</li>
             <li><strong>Find or generate poses.</strong> Dictionary signs come from a pose lookup; out-of-vocabulary words go through a generative pathway.</li>
@@ -417,7 +418,7 @@
           <img class="portrait" src="./assets/images/abdullah-arif.jpg" alt="Abdullah Arif" width="640" height="640" loading="lazy">
           <div class="bio-text">
             <p>
-              I studied data science at FAST-NUCES in Lahore and graduated in 2026. Most of my research there went into Pakistan Sign Language, which has very little data and few tools: a text-to-gloss model at CLE-KICS, a final-year project that signs typed sentences, and an IEEE paper on generating hand poses.
+              I studied data science at FAST-NUCES in Lahore and graduated in 2026. Most of my research there went into Pakistan Sign Language, which has very little data and few tools: a text-to-gloss model at CLE-KICS, a final-year project that turns typed or spoken sentences into signs, and an IEEE paper on generating hand poses.
             </p>
             <p>
               Now I work on two sides of applied data. Inside a US e-commerce brand, I build attribution, campaign automation and customer models. With clients at Exaverse, I scope the work and stay on after launch.

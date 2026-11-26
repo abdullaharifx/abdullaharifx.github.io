@@ -341,6 +341,7 @@ strong { font-weight: 800; }
 }
 
 .role-meta {
+  max-width: 40rem;
   color: var(--moss);
   font-size: 1rem;
   margin-bottom: 0.9rem;
