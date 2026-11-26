@@ -509,20 +509,6 @@ strong { font-weight: 800; }
   background: var(--rule); /* placeholder block while the image loads */
 }
 
-.shot { margin: 0.25rem 0 0.25rem; }
-/* shown at natural size up to the column width, so small captures aren't blurred by stretching */
-.shot img {
-  max-width: 100%;
-  height: auto;
-  background: var(--rule); /* placeholder block while the image loads */
-  border: 1px solid var(--rule);
-}
-.shot figcaption {
-  margin-top: 0.4rem;
-  color: var(--moss);
-  font-size: 0.875rem;
-}
-
 .bio-text { display: grid; gap: 1rem; max-width: 36em; }
 
 .sub {
