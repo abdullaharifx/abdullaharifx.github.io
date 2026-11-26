@@ -469,9 +469,10 @@ strong { font-weight: 800; }
   background:
     linear-gradient(var(--ink), var(--ink)) center / 100% 1.5px no-repeat,
     linear-gradient(var(--ink), var(--ink)) center / 1.5px 100% no-repeat;
-  transition: transform 0.2s ease;
+  transition: transform 0.28s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
-.index details[open] summary::after { transform: rotate(45deg); }
+/* .is-closing is set by site.js while a row animates shut, so the × turns back at the start */
+.index details[open]:not(.is-closing) summary::after { transform: rotate(45deg); }
 
 .index summary:hover .nm strong { color: var(--green); }
 
@@ -490,12 +491,15 @@ strong { font-weight: 800; }
   text-align: right;
 }
 
+/* No vertical padding here: site.js animates this element's height down to 0,
+   so the bottom spacing lives on the last child instead. */
 .index-body {
   display: grid;
   gap: 0.75rem;
   max-width: 40rem;
-  padding: 0 0 1.5rem calc(3.5rem + 1.25rem);
+  padding-left: calc(3.5rem + 1.25rem);
 }
+.index-body > :last-child { margin-bottom: 1.5rem; }
 
 .tools { color: var(--moss); font-size: 0.9375rem; }
 

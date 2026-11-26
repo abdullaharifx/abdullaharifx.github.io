@@ -248,6 +248,68 @@
 })();
 
 
+/*
+  Project index: animate rows opening and closing. Without JS (or with
+  reduced motion) the native <details> toggle still works, just instantly.
+*/
+(function projectRows() {
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const EASE = "cubic-bezier(0.2, 0.7, 0.2, 1)";
+
+  document.querySelectorAll(".index details").forEach((details) => {
+    const summary = details.querySelector("summary");
+    const body = details.querySelector(".index-body");
+    if (!summary || !body || !body.animate) return;
+    let anim = null;
+
+    summary.addEventListener("click", (e) => {
+      if (reduce.matches) return;
+      e.preventDefault();
+
+      const closing = details.open && !details.classList.contains("is-closing");
+      // measure where we are now, including partway through a running animation
+      const now = details.open ? body.getBoundingClientRect().height : 0;
+      if (anim) anim.cancel();
+      body.style.overflow = "hidden";
+
+      if (closing) {
+        const full = body.scrollHeight || 1;
+        details.classList.add("is-closing");
+        anim = body.animate(
+          [
+            { height: now + "px", opacity: Math.min(1, now / full), transform: "translateY(0)" },
+            { height: "0px", opacity: 0, transform: "translateY(-6px)" },
+          ],
+          { duration: 220, easing: EASE, fill: "forwards" }
+        );
+        anim.onfinish = () => {
+          details.open = false;
+          details.classList.remove("is-closing");
+          body.style.overflow = "";
+          anim.cancel();
+          anim = null;
+        };
+      } else {
+        details.classList.remove("is-closing");
+        details.open = true;
+        const full = body.scrollHeight || 1;
+        anim = body.animate(
+          [
+            { height: now + "px", opacity: now / full, transform: `translateY(${now ? 0 : -6}px)` },
+            { height: full + "px", opacity: 1, transform: "translateY(0)" },
+          ],
+          { duration: 300, easing: EASE }
+        );
+        anim.onfinish = () => {
+          body.style.overflow = "";
+          anim = null;
+        };
+      }
+    });
+  });
+})();
+
+
 /* Mark the nav link for the section currently on screen. */
 (function navState() {
   const links = [...document.querySelectorAll(".nav a")];
